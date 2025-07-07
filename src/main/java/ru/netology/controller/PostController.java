@@ -1,8 +1,8 @@
 package ru.netology.controller;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.*;
 import ru.netology.model.Post;
 import ru.netology.service.PostService;
-import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.BufferedReader;
 import java.util.List;
@@ -32,7 +32,7 @@ public class PostController {
     }
 
     @DeleteMapping("/{id}")
-    public void removeById(long id, HttpServletResponse resp) {
+    public void removeById(@PathVariable long id, HttpServletResponse resp) {
         service.removeById(id);
     }
 

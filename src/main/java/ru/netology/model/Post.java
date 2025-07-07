@@ -1,10 +1,12 @@
 package ru.netology.model;
-public class Post {
-    private long id;
-    private String content;
+import com.google.gson.annotations.SerializedName;
 
-    public Post() {
-    }
+public class Post {
+    @SerializedName("id")
+    private long id;
+
+    @SerializedName("content")
+    private String content;
 
     public Post(long id, String content) {
         this.id = id;
